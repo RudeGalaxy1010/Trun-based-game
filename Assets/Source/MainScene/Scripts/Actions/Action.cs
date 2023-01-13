@@ -8,7 +8,6 @@ public abstract class Action
     {
         _duration = duration;
         Character = character;
-        OnCreated();
     }
 
     public bool Expired => _duration <= 0;
@@ -24,7 +23,6 @@ public abstract class Action
         }
     }
 
-    protected virtual void OnCreated() { }
     protected virtual void OnApply() { }
     protected virtual void OnExpired() { }
 }

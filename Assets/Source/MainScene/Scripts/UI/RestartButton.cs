@@ -1,10 +1,11 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
 public class RestartButton : MonoBehaviour
 {
+    [SerializeField] private Restart _restart;
+
     private Button _button;
 
     private void Awake()
@@ -24,6 +25,6 @@ public class RestartButton : MonoBehaviour
 
     private void OnButtonClick()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        _restart.ReloadScene();
     }
 }

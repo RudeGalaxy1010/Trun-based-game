@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class Field : MonoBehaviour
 {
+    public event UnityAction TurnCompleted;
     public event UnityAction<Command> CommandSwitched;
 
     private const int StartCommandIndex = 0;
@@ -45,6 +46,7 @@ public class Field : MonoBehaviour
     {
         SwitchNextCommand();
         MakeTurn();
+        TurnCompleted?.Invoke();
     }
 
     private void SwitchNextCommand()

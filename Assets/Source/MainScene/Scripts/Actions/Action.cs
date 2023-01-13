@@ -1,10 +1,7 @@
 using System;
-using UnityEngine.Events;
 
 public abstract class Action
 {
-    public event UnityAction<Action> Expired;
-
     private int _duration;
 
     protected Type IncompitableWith;
@@ -17,14 +14,16 @@ public abstract class Action
         OnCreated();
     }
 
+    public bool Expired => _duration <= 0;
+
     public void Apply()
     {
         OnApply();
         _duration--;
 
-        if (_duration <= 0)
+        if (Expired)
         {
-            Expired?.Invoke(this);
+            OnExpired();
         }
     }
 

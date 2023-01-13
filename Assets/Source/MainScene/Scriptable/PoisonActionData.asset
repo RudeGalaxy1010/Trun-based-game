@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: PoisonActionData
   m_EditorClassIdentifier: 
   Duration: 2
+  Icon: {fileID: 21300000, guid: b93fdf8359f4de6479d9c2aa8f405fd3, type: 3}
   Damage: 1

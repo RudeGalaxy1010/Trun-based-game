@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: HealActionData
   m_EditorClassIdentifier: 
   Duration: 1
+  Icon: {fileID: 21300000, guid: 977347a7cf6731c4fbf9b3b44ec3e8f6, type: 3}
   Health: 1

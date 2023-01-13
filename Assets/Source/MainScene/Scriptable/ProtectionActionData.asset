@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ProtectionActionData
   m_EditorClassIdentifier: 
   Duration: 3
+  Icon: {fileID: 21300000, guid: 79f15927fb802f1458b4c87ab9439adb, type: 3}
   Protection: 2

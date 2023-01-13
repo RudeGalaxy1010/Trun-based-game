@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TakeDamageActionData
   m_EditorClassIdentifier: 
   Duration: 1
+  Icon: {fileID: 21300000, guid: 8ce0e94c4a09ef34f95409d6ca5798bb, type: 3}
   Damage: 3

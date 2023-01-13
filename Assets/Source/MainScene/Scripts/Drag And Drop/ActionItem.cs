@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(RectTransform), typeof(CanvasGroup))]
 public class ActionItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public event UnityAction<ActionItem> Used;
+
+    [SerializeField] private Image _icon;
 
     private Canvas _canvas;
     private RectTransform _rectTransform;
@@ -22,6 +25,7 @@ public class ActionItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
     {
         _canvas = canvas;
         _actionData = actionData;
+        _icon.sprite = actionData.Icon;
     }
 
     public void OnBeginDrag(PointerEventData eventData)

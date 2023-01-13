@@ -2,6 +2,11 @@ public class PlayerCommand : Command
 {
     public override void MakeTurn()
     {
+        if (Characters.Count == 0)
+        {
+            return;
+        }
+
         CurrentCharacterIndex = StartCharacterIndex;
         CreateAction();
     }

@@ -7,6 +7,7 @@ public abstract class Command : MonoBehaviour
     protected const int StartCharacterIndex = 0;
 
     public event UnityAction<Command> TurnCompleted;
+    public event UnityAction<int> CharactersCountChanged;
 
     [SerializeField] protected List<Character> Characters;
     [SerializeField] protected ActionsPool ActionsPool;
@@ -51,5 +52,6 @@ public abstract class Command : MonoBehaviour
     {
         character.Died -= OnCharacterDied;
         Characters.Remove(character);
+        CharactersCountChanged?.Invoke(Characters.Count);
     }
 }

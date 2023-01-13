@@ -88,7 +88,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -392,9 +392,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 254.05424, y: 144.46468, z: -2.5109901}
+    m_Target: {x: 265.13684, y: 194.32022, z: -5.096388}
     speed: 2
-    m_Value: {x: 254.05424, y: 144.46468, z: -2.5109901}
+    m_Value: {x: 265.13684, y: 194.32022, z: -5.096388}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -445,9 +445,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 105.850685
+    m_Target: 348.02243
     speed: 2
-    m_Value: 105.850685
+    m_Value: 348.02243
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 23033
+  controlID: 29985
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -542,8 +542,8 @@ MonoBehaviour:
     y: 0
     width: 406
     height: 417
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -580,9 +580,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f4220000
-      m_LastClickedID: 0
-      m_ExpandedIDs: c8e4ffff28fbffff745f00007e5f000038780000
+      m_SelectedIDs: d8a20000
+      m_LastClickedID: 41688
+      m_ExpandedIDs: a214ffffc8e4ffff28fbffff745f00007e5f00003878000042780000cea20000d8a20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -673,21 +673,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Source/MainScene/Scripts/Actions
+    - Assets/Source/MainScene/Scripts/UI
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Source/MainScene/Scripts/Actions
+  - Assets/Source/MainScene/Scripts/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Work\UnityProjects\Turn-based_game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 76600000
-    m_LastClickedID: 24694
+    m_SelectedIDs: 7c600000
+    m_LastClickedID: 24700
     m_ExpandedIDs: 000000004c6000004e600000546000007060000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -741,8 +741,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f4220000
-    m_LastClickedInstanceID: 8948
+    m_SelectedInstanceIDs: d8a20000
+    m_LastClickedInstanceID: 41688
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:

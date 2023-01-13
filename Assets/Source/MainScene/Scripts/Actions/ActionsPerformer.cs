@@ -33,9 +33,13 @@ public class ActionsPerformer : MonoBehaviour
     {
         for (int i = 0; i < _actions.Count; i++)
         {
-            _actions[i].Apply();
+            ApplyAction(_actions[i]);
         }
+    }
 
+    private void ApplyAction(Action action)
+    {
+        action.Apply();
         _actions = _actions.Where(a => a.Expired == false).ToList();
     }
 }

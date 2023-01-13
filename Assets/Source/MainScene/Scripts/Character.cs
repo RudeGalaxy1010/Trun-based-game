@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     private void Start()
     {
         HealthChanged?.Invoke(_health);
+        ProtectionChanged?.Invoke(_protection);
     }
 
     public void TakeDamage(int value)
@@ -24,8 +25,14 @@ public class Character : MonoBehaviour
 
         if (_protection > 0)
         {
-            RemoveProtection(value);
-            return;
+            if (value <= _protection)
+            {
+                RemoveProtection(value);
+                return;
+            }
+
+            value = value - _protection;
+            RemoveProtection(_protection);
         }
 
         _health -= value;
@@ -67,7 +74,7 @@ public class Character : MonoBehaviour
         }
 
         _protection = Mathf.Max(0, _protection - value);
-        ProtectionChanged?.Invoke(value);
+        ProtectionChanged?.Invoke(_protection);
     }
 
     public void Die()

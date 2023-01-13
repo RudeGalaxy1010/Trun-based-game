@@ -296,12 +296,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 73510607}
   _actionsData:
-  - {fileID: 11400000, guid: f9812a9e735eab64b972eae04ddd9f44, type: 2}
-  - {fileID: 11400000, guid: 20627bbfe67ceb748b52e9d3ddc5757b, type: 2}
   - {fileID: 11400000, guid: 3c0eda0f58ebdf04baf3d7cd7a883720, type: 2}
+  - {fileID: 11400000, guid: 20627bbfe67ceb748b52e9d3ddc5757b, type: 2}
+  - {fileID: 11400000, guid: f9812a9e735eab64b972eae04ddd9f44, type: 2}
   - {fileID: 11400000, guid: 25113aa5f2e9e7a41ab10b7202b3d502, type: 2}
   _actionItemPrefab: {fileID: 6635977164477025426, guid: 19188e3e65a927448a298fe40ebf033c, type: 3}
-  SpawnOffset: {x: 0, y: 125}
+  SpawnOffset: {x: 0, y: 200}
   _actionsCount: 10
 --- !u!1 &264235882
 GameObject:
@@ -760,7 +760,7 @@ MonoBehaviour:
   _actionsData:
   - {fileID: 11400000, guid: 25113aa5f2e9e7a41ab10b7202b3d502, type: 2}
   _actionItemPrefab: {fileID: 6635977164477025426, guid: 19188e3e65a927448a298fe40ebf033c, type: 3}
-  SpawnOffset: {x: 0, y: 125}
+  SpawnOffset: {x: 0, y: 200}
   _actionsCount: 10
 --- !u!1 &1082064256
 GameObject:

@@ -17,9 +17,14 @@ public class ActionItemSlot : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null && eventData.pointerDrag.TryGetComponent(out ActionItem actionItem))
         {
-            Action action = actionItem.CreateActionFor(_character);
-            _actionsPerformer.AddAction(action);
-            actionItem.Use();
+            ApplyActionItem(actionItem);
         }
+    }
+
+    public void ApplyActionItem(ActionItem actionItem)
+    {
+        Action action = actionItem.CreateActionFor(_character);
+        _actionsPerformer.AddAction(action);
+        actionItem.Use();
     }
 }

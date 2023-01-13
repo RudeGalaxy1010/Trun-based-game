@@ -281,7 +281,7 @@ MonoBehaviour:
   Characters:
   - {fileID: 1340637676}
   - {fileID: 531412829}
-  _actionsPool: {fileID: 185841765}
+  ActionsPool: {fileID: 185841765}
 --- !u!114 &185841765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +741,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Characters:
   - {fileID: 7529567296501174408}
+  ActionsPool: {fileID: 929029152}
+  _playerCharacters:
+  - {fileID: 1340637676}
+  - {fileID: 531412829}
   _turnDelayTime: 1
 --- !u!114 &929029152
 MonoBehaviour:

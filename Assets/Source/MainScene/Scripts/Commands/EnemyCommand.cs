@@ -16,7 +16,6 @@ public class EnemyCommand : Command
     {
         ActionItem item = ActionsPool.GetRandomActionItemFor(CurrentCharacter);
         ActionItems.Add(item);
-        item.enabled = false;
         item.Used += OnActionUsed;
         StartCoroutine(ApplyActionToRandomPlayerCharacter(item));
     }

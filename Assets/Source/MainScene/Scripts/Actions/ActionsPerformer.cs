@@ -21,7 +21,7 @@ public class ActionsPerformer : MonoBehaviour
     public void AddAction(Action action)
     {
         _actions.Add(action);
-        action.Apply();
+        ApplyAction(action);
     }
 
     private void OnTurnComplete()

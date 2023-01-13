@@ -7,7 +7,7 @@ public class HealAction : Action
         _health = health;
     }
 
-    protected override void OnApply()
+    public override void OnCreated()
     {
         Character.Heal(_health);
     }

@@ -23,6 +23,7 @@ public abstract class Action
         }
     }
 
+    public virtual void OnCreated() { }
     protected virtual void OnApply() { }
     protected virtual void OnExpired() { }
 }

@@ -27,10 +27,9 @@ public class ActionsPerformer : MonoBehaviour
 
     public void AddAction(Action action)
     {
-        // TODO: fix bug with 2 turns in one action apply
         _actions.Add(action);
         ActionAdded?.Invoke(action);
-        ApplyAction(action);
+        action.OnCreated();
     }
 
     private void OnTurnComplete()

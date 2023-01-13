@@ -7,7 +7,7 @@ public class TakeDamageAction : Action
         _damage = damage;
     }
 
-    protected override void OnApply()
+    public override void OnCreated()
     {
         Character.TakeDamage(_damage);
     }

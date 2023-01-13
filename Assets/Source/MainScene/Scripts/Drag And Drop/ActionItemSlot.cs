@@ -17,6 +17,7 @@ public class ActionItemSlot : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null && eventData.pointerDrag.TryGetComponent(out ActionItem actionItem))
         {
+            actionItem.OnEndDrag(eventData);
             ApplyActionItem(actionItem);
         }
     }

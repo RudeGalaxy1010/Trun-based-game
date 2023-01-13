@@ -6,8 +6,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(RectTransform), typeof(CanvasGroup))]
 public class ActionItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    // TODO: fix drag and drop
-
     public event UnityAction<ActionItem> Used;
 
     [SerializeField] private Image _icon;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908304cfef5e84c4cb19e67cd9545bee, type: 3}
   m_Name: TakeDamageActionData
   m_EditorClassIdentifier: 
-  Duration: 0
-  Damage: 0
+  Duration: 1
+  Damage: 3

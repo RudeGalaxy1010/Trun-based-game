@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8f3adc741eb67468ed58d712052428, type: 3}
   m_Name: HealActionData
   m_EditorClassIdentifier: 
-  Duration: 0
-  Health: 0
+  Duration: 1
+  Health: 1

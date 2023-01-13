@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c051b11c4741d4d8d7cf85a960dfd1, type: 3}
   m_Name: ProtectionActionData
   m_EditorClassIdentifier: 
-  Duration: 0
-  Protection: 0
+  Duration: 3
+  Protection: 2

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,13 +8,30 @@ public abstract class Command : MonoBehaviour
 
     public event UnityAction<Command> TurnCompleted;
 
-    [SerializeField] protected Character[] Characters;
+    [SerializeField] protected List<Character> Characters;
     [SerializeField] protected ActionsPool ActionsPool;
 
     protected int CurrentCharacterIndex;
 
-    protected bool IsLastCharacterProcessed => CurrentCharacterIndex == Characters.Length;
+    public Character RandomCharacter => Characters[Random.Range(0, Characters.Count)];
+    protected bool IsLastCharacterProcessed => CurrentCharacterIndex == Characters.Count;
     protected Character CurrentCharacter => Characters[CurrentCharacterIndex];
+
+    private void OnEnable()
+    {
+        for (int i = 0; i < Characters.Count; i++)
+        {
+            Characters[i].Died += OnCharacterDied;
+        }
+    }
+
+    private void OnDisable()
+    {
+        for (int i = 0; i < Characters.Count; i++)
+        {
+            Characters[i].Died -= OnCharacterDied;
+        }
+    }
 
     public virtual void CompleteTurn()
     {
@@ -21,4 +39,10 @@ public abstract class Command : MonoBehaviour
     }
 
     public abstract void MakeTurn();
+
+    private void OnCharacterDied(Character character)
+    {
+        character.Died -= OnCharacterDied;
+        Characters.Remove(character);
+    }
 }

@@ -742,9 +742,7 @@ MonoBehaviour:
   Characters:
   - {fileID: 7529567296501174408}
   ActionsPool: {fileID: 929029152}
-  _playerCharacters:
-  - {fileID: 1340637676}
-  - {fileID: 531412829}
+  _playerCommand: {fileID: 185841764}
   _turnDelayTime: 1
 --- !u!114 &929029152
 MonoBehaviour:

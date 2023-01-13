@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyCommand : Command
 {
-    [SerializeField] private Character[] _playerCharacters;
+    [SerializeField] private Command _playerCommand;
     [SerializeField] private float _turnDelayTime;
 
     public override void MakeTurn()
@@ -37,10 +37,10 @@ public class EnemyCommand : Command
 
     private IEnumerator ApplyActionToRandomPlayerCharacter(ActionItem actionItem)
     {
-        Character playerCharacter = _playerCharacters[Random.Range(0, _playerCharacters.Length)];
+        Character playerCharacter = _playerCommand.RandomCharacter;
         actionItem.GetComponent<RectTransform>().anchoredPosition = 
             playerCharacter.GetComponent<RectTransform>().anchoredPosition;
         playerCharacter.GetComponent<ActionItemSlot>().ApplyActionItem(actionItem);
-        yield return new WaitForSeconds(_turnDelayTime / Characters.Length);
+        yield return new WaitForSeconds(_turnDelayTime / Characters.Count);
     }
 }

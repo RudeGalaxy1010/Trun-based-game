@@ -12,6 +12,7 @@ public abstract class Command : MonoBehaviour
     [SerializeField] protected ActionsPool ActionsPool;
 
     protected int CurrentCharacterIndex;
+    protected List<ActionItem> ActionItems = new List<ActionItem>();
 
     public Character RandomCharacter => Characters[Random.Range(0, Characters.Count)];
     protected bool IsLastCharacterProcessed => CurrentCharacterIndex == Characters.Count;
@@ -35,6 +36,12 @@ public abstract class Command : MonoBehaviour
 
     public virtual void CompleteTurn()
     {
+        for (int i = 0; i < ActionItems.Count; i++)
+        {
+            ActionsPool.ReturnItem(ActionItems[i]);
+        }
+
+        ActionItems.Clear();
         TurnCompleted?.Invoke(this);
     }
 

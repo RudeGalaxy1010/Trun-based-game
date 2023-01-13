@@ -9,6 +9,7 @@ public class PlayerCommand : Command
     private void CreateAction()
     {
         ActionItem item = ActionsPool.GetRandomActionItemFor(CurrentCharacter);
+        ActionItems.Add(item);
         item.Used += OnActionUsed;
     }
 

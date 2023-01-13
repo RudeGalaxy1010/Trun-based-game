@@ -5,7 +5,7 @@ public abstract class Command : MonoBehaviour
 {
     public event UnityAction<Command> TurnCompleted;
 
-    [SerializeField] private Character[] _characters;
+    [SerializeField] protected Character[] Characters;
 
     public virtual void CompleteTurn()
     {

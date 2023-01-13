@@ -1,19 +1,27 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform), typeof(CanvasGroup))]
 public class ActionItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private Canvas _canvas;
-    [SerializeField] private ActionData _actionData;
+    public event UnityAction<ActionItem> Used;
 
+    private Canvas _canvas;
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
+    private ActionData _actionData;
 
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
         _canvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    public void Init(Canvas canvas, ActionData actionData)
+    {
+        _canvas = canvas;
+        _actionData = actionData;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -34,5 +42,10 @@ public class ActionItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
     public Action CreateActionFor(Character character)
     {
         return _actionData.CreateActionFor(character);
+    }
+
+    public void Use()
+    {
+        Used?.Invoke(this);
     }
 }

@@ -19,7 +19,7 @@ public class ActionItemSlot : MonoBehaviour, IDropHandler
         {
             Action action = actionItem.CreateActionFor(_character);
             _actionsPerformer.AddAction(action);
-            Destroy(eventData.pointerDrag);
+            actionItem.Use();
         }
     }
 }

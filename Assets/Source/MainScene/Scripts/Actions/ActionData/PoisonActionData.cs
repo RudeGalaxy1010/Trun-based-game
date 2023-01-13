@@ -4,4 +4,9 @@ using UnityEngine;
 public class PoisonActionData : ActionData
 {
     public int Damage;
+
+    public override Action CreateActionFor(Character character)
+    {
+        return new PoisonAction(character, Damage, Duration);
+    }
 }

@@ -6,7 +6,7 @@ public class ActionsPerformer : MonoBehaviour
 {
     [SerializeField] private Field _field;
 
-    private List<Action> _actions;
+    private List<Action> _actions = new List<Action>();
 
     private void OnEnable()
     {

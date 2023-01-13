@@ -4,4 +4,9 @@ using UnityEngine;
 public class ProtectionActionData : ActionData
 {
     public int Protection;
+
+    public override Action CreateActionFor(Character character)
+    {
+        return new ProtectAction(character, Protection, Duration);
+    }
 }

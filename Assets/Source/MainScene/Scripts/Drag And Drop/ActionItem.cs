@@ -2,10 +2,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform), typeof(CanvasGroup))]
-public class ActionItemDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
-    IEndDragHandler, IDragHandler, IDropHandler
+public class ActionItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] private Canvas _canvas;
+    [SerializeField] private ActionData _actionData;
 
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
@@ -31,13 +31,8 @@ public class ActionItemDrag : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         _canvasGroup.blocksRaycasts = true;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public Action CreateActionFor(Character character)
     {
-        //Debug.Log("Mouse down");
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
+        return _actionData.CreateActionFor(character);
     }
 }

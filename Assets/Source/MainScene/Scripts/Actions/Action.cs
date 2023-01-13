@@ -10,14 +10,14 @@ public abstract class Action
         Character = character;
     }
 
-    public bool Expired => _duration <= 0;
+    public bool HasExpired => _duration <= 0;
 
     public void Apply()
     {
         OnApply();
         _duration--;
 
-        if (Expired)
+        if (HasExpired)
         {
             OnExpired();
         }

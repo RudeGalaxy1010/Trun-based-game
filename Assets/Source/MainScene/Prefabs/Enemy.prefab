@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: _character
       value: 
       objectReference: {fileID: 4663996793610543246}
+    - target: {fileID: 3051395582988605660, guid: bb2a9a54d4290ae43be1396e625a103b, type: 3}
+      propertyPath: _actionsPerformer
+      value: 
+      objectReference: {fileID: 4921393868931693431}
     - target: {fileID: 8496421969217486895, guid: bb2a9a54d4290ae43be1396e625a103b, type: 3}
       propertyPath: m_Name
       value: Stats Panel

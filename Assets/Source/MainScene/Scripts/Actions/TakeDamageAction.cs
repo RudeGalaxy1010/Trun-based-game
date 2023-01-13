@@ -1,8 +1,11 @@
+using System;
+
 public class TakeDamageAction : Action
 {
     private int _damage;
 
-    public TakeDamageAction(Character character, int damage, int duration) : base(character, duration)
+    public TakeDamageAction(Character character, int damage, int duration, Type[] cancells) 
+        : base(character, duration, cancells)
     {
         _damage = damage;
     }

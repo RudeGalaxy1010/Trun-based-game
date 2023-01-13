@@ -1,8 +1,11 @@
+using System;
+
 public class ProtectAction : Action
 {
     private int _protection;
 
-    public ProtectAction(Character character, int protection, int duration) : base(character, duration)
+    public ProtectAction(Character character, int protection, int duration, Type[] cancells) 
+        : base(character, duration, cancells)
     {
         _protection = protection;
     }

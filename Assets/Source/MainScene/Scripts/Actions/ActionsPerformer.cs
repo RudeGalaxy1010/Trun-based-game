@@ -30,6 +30,14 @@ public class ActionsPerformer : MonoBehaviour
         _actions.Add(action);
         ActionAdded?.Invoke(action);
         action.OnCreated();
+
+        CancellActions(action.CancellTypes);
+    }
+
+    private void CancellActions(IReadOnlyList<Type> cancellTypes)
+    {
+        List<Action> actionsToCancell = _actions.Where(a => cancellTypes.Contains(a.GetType())).ToList();
+        _actions = _actions.Except(actionsToCancell).ToList();
     }
 
     private void OnTurnComplete()

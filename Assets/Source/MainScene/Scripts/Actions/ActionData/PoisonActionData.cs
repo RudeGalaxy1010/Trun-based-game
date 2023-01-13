@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Custom/Actions/PoisonActionData", fileName = "New PoisonActionData")]
@@ -7,6 +8,6 @@ public class PoisonActionData : ActionData
 
     public override Action CreateActionFor(Character character)
     {
-        return new PoisonAction(character, Damage, Duration);
+        return new PoisonAction(character, Damage, Duration, Cancells.Select(c => c.GetType()).ToArray());
     }
 }

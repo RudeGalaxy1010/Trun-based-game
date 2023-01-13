@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Custom/Actions/HealActionData", fileName = "New HealActionData")]
@@ -7,6 +8,6 @@ public class HealActionData : ActionData
 
     public override Action CreateActionFor(Character character)
     {
-        return new HealAction(character, Health, Duration);
+        return new HealAction(character, Health, Duration, Cancells.Select(c => c.GetType()).ToArray());
     }
 }

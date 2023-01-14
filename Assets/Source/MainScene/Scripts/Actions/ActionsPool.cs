@@ -5,6 +5,7 @@ using UnityEngine;
 public class ActionsPool : MonoBehaviour
 {
     [SerializeField] private Canvas _canvas;
+    [SerializeField] private Transform _actionsContainer;
     [SerializeField] private ActionData[] _actionsData;
     [SerializeField] private ActionItem _actionItemPrefab;
     [SerializeField] private Vector2 SpawnOffset;
@@ -24,7 +25,7 @@ public class ActionsPool : MonoBehaviour
 
     private ActionItem CreateItem()
     {
-        ActionItem item = Instantiate(_actionItemPrefab, _canvas.transform);
+        ActionItem item = Instantiate(_actionItemPrefab, _actionsContainer);
         item.gameObject.SetActive(false);
         _items.Add(item);
         return item;

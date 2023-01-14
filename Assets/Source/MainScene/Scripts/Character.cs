@@ -63,7 +63,7 @@ public class Character : MonoBehaviour
         }
 
         _protection += value;
-        ProtectionChanged?.Invoke(value);
+        ProtectionChanged?.Invoke(_protection);
     }
 
     public void RemoveProtection(int value)

@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -9,5 +10,10 @@ public class TakeDamageActionData : ActionData
     public override Action CreateActionFor(Character character)
     {
         return new TakeDamageAction(character, Damage, Duration, Cancells.Select(c => c.GetType()).ToArray());
+    }
+
+    public override Type GetActionType()
+    {
+        return typeof(TakeDamageAction);
     }
 }

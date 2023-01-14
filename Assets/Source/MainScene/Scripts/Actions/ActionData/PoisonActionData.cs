@@ -10,4 +10,9 @@ public class PoisonActionData : ActionData
     {
         return new PoisonAction(character, Damage, Duration, Cancells.Select(c => c.GetType()).ToArray());
     }
+
+    public override System.Type GetActionType()
+    {
+        return typeof(PoisonAction);
+    }
 }

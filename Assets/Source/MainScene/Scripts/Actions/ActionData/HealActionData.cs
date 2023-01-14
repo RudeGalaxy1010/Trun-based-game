@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -8,6 +9,11 @@ public class HealActionData : ActionData
 
     public override Action CreateActionFor(Character character)
     {
-        return new HealAction(character, Health, Duration, Cancells.Select(c => c.GetType()).ToArray());
+        return new HealAction(character, Health, Duration, Cancells.Select(c => c.GetActionType()).ToArray());
+    }
+
+    public override Type GetActionType()
+    {
+        return typeof(HealAction);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public abstract class ActionData : ScriptableObject
@@ -7,4 +8,5 @@ public abstract class ActionData : ScriptableObject
     public ActionData[] Cancells;
 
     public abstract Action CreateActionFor(Character character);
+    public abstract Type GetActionType();
 }

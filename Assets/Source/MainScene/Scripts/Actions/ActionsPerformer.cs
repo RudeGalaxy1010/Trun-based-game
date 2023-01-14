@@ -40,8 +40,8 @@ public class ActionsPerformer : MonoBehaviour
 
         for (int i = 0; i < actionsToCancell.Length; i++)
         {
-            ActionRemoved?.Invoke(actionsToCancell[i]);
             _actions.Remove(actionsToCancell[i]);
+            ActionRemoved?.Invoke(actionsToCancell[i]);
         }
     }
 
